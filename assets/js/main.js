@@ -73,16 +73,30 @@
         }
     });
 
+    $("#navigation a").on("click", function(){
+      $('.mobile_menu').collapse('hide');
+  });
+
 /* 3. slick Nav */
 // mobile_menu
+    // Initialize SlickNav
     var menu = $('ul#navigation');
     if(menu.length){
-      menu.slicknav({
-        prependTo: ".mobile_menu",
-        closedSymbol: '+',
-        openedSymbol:'-'
-      });
+        menu.slicknav({
+            prependTo: ".mobile_menu",
+            closedSymbol: '+',
+            openedSymbol:'-'
+        });
     };
+
+    // Close the SlickNav menu when a link inside it is clicked
+    $('.slicknav_nav a').on('click', function(){
+        menu.slicknav('close');
+    });
+
+    $('.slicknav_nav a').on('click', function(){
+      $('.mobile_menu').slicknav('close');
+  });
 
 /* 4. MainSlider-1 */
     // h1-hero-active
@@ -322,5 +336,6 @@
   $(".snake").snakeify({
     speed: 200
   });
+
 
 })(jQuery);
