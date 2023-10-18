@@ -22,13 +22,56 @@
     });
 
   // Scroll Up
-    $('#back-top a').on("click", function () {
-      $('body,html').animate({
-        scrollTop: 0
-      }, 800);
-      return false;
-    });
+  //   $('#back-top a').on("click", function () {
+  //     $('body,html').animate({
+  //       scrollTop: 0
+  //     }, 800);
+  //     return false;
+  //   });
+  //   $('a[href^="#"]').on("click", function(e) {
+  //     var targetId = $(this).attr('href');  // e.g., "#about" or "#team"
+
+  //     if (targetId && $(targetId).length) {  // Check if the target element with the given ID exists
+  //         e.preventDefault();
+
+  //         $('body,html').animate({
+  //             scrollTop: $(targetId).offset().top
+  //         }, 800);
+  //     }
+  // });
   
+  var sections = $('section'); // Assuming sections are defined using the <section> tag. Adjust if needed.
+    var nav_links = $('#navigation li');
+
+    $(window).on('scroll', function() {
+        var cur_pos = $(this).scrollTop() + $(this).height() / 3; // Adjust the divisor (3 here) for more/less sensitivity
+
+        sections.each(function() {
+            var top = $(this).offset().top,
+                bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+                nav_links.removeClass('active');
+                $('#navigation').find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
+            }
+        });
+    });
+
+    // Smooth scrolling and active state change on click
+    $('a[href^="#"]').on('click', function(e) {
+        var targetId = $(this).attr('href');
+
+        if (targetId && $(targetId).length) {
+            e.preventDefault();
+
+            $('body,html').animate({
+                scrollTop: $(targetId).offset().top
+            }, 800);
+
+            nav_links.removeClass('active');
+            $(this).parent('li').addClass('active');
+        }
+    });
 
 /* 3. slick Nav */
 // mobile_menu
