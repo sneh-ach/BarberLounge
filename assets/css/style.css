@@ -2841,7 +2841,7 @@ hr {
 
 .slider-area {
   margin-top: -1px;
-  background-image: url(../img/hero/h1_hero.png);
+  background-image: url(../img/Banner.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -7016,30 +7016,32 @@ del {
     display: block;
     margin: 0 auto;
   }
+
   .horizontal-scroll {
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-}
+  }
 
-.horizontal-scroll .row {
+  .horizontal-scroll .row {
     display: inline-block;
-    width: auto; /* Optional, based on content */
-}
+    width: auto;
+    /* Optional, based on content */
+  }
 
-.horizontal-scroll .col-xl-4,
-.horizontal-scroll .col-lg-4,
-.horizontal-scroll .col-md-6 {
+  .horizontal-scroll .col-xl-4,
+  .horizontal-scroll .col-lg-4,
+  .horizontal-scroll .col-md-6 {
     display: inline-block;
-    float: none; /* Prevent default float from Bootstrap */
-    white-space: normal; /* Reset to default for inner content */
+    float: none;
+    /* Prevent default float from Bootstrap */
+    white-space: normal;
+    /* Reset to default for inner content */
     vertical-align: top;
-    width: calc(50% - 25px); /* width minus margins */
-    margin: 8px; /* Provide some spacing */
-}
+    width: calc(50% - 25px);
+    /* width minus margins */
+    margin: 8px;
+    /* Provide some spacing */
+  }
 
 }
-
-
-
-
