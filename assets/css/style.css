@@ -7038,7 +7038,7 @@ del {
     white-space: normal;
     /* Reset to default for inner content */
     vertical-align: top;
-    width: calc(50% - 25px);
+    width: calc(50% - 27px);
     /* width minus margins */
     margin: 8px;
     /* Provide some spacing */
