@@ -8,12 +8,13 @@
   color: #f1f1f1;
   width: 100%;
   transition: .5s ease;
-  opacity:0;
+  opacity: 0;
   color: white;
   font-size: 20px;
   padding: 20px;
   text-align: center;
 }
+
 /* Custom styles for the gallery images */
 .gallery-img {
   position: relative;
@@ -23,22 +24,27 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 /* Show the static gallery on medium devices and up, hide the carousel */
 @media (min-width: 768px) {
   .carousel {
-      display: none;
+    display: none;
   }
+
   .gallery-img {
-      height: 300px; /* Larger height for larger screens */
+    height: 300px;
+    /* Larger height for larger screens */
   }
 }
+
 /* Hide the static gallery on small devices and show the carousel */
 @media (max-width: 767px) {
   .static-gallery {
-      display: none;
+    display: none;
   }
+
   .carousel {
-      display: block;
+    display: block;
   }
 }
 
@@ -223,8 +229,10 @@ p {
 
 /* Default styles - for mobile devices */
 .logo img {
-  max-width: none; /* Override max-width for the logo image */
-  width: 20%; /* Set width for mobile */
+  max-width: none;
+  /* Override max-width for the logo image */
+  width: 20%;
+  /* Set width for mobile */
   /* padding-bottom: 30px;
   padding-left: 30px;
   padding-top: 70px; */
@@ -237,8 +245,9 @@ p {
 /* Media query for tablets/desktops/laptops */
 @media (min-width: 992px) {
   .logo img {
-      width: 40%; /* Set width for larger devices */
-      /* max-width: none is not needed here if 30% is within the possible max-width */
+    width: 40%;
+    /* Set width for larger devices */
+    /* max-width: none is not needed here if 30% is within the possible max-width */
   }
 }
 
@@ -3369,7 +3378,7 @@ hr {
 
 .service-area .services-caption {
   background: #f8f8f8;
-  padding: 84px 45px 56px;
+  padding: 84px 75px 56px;
   border-radius: 7px;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -3433,7 +3442,7 @@ hr {
 }
 
 .services-caption:hover .service-icon::before {
-  right: -32px;
+  right: -45px;
 }
 
 .services-caption:hover .service-icon i {
