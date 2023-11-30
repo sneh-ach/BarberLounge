@@ -2190,7 +2190,7 @@ hr {
 @media (max-width: 575px) {
   .section-padding2 {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 0px;
   }
 }
 
@@ -2923,6 +2923,14 @@ hr {
   background-attachment: fixed;
 }
 
+/* Media query for phone screens */
+@media only screen and (max-width: 600px) {
+  .slider-area {
+    background-position: 75% top; /* Adjust the percentage as needed */
+  }
+}
+
+
 .slider-area .hero__caption {
   overflow: hidden;
 }
@@ -3378,7 +3386,7 @@ hr {
 
 .service-area .services-caption {
   background: #f8f8f8;
-  padding: 84px 75px 56px;
+  padding: 84px 46px 56px;
   border-radius: 7px;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -3480,23 +3488,23 @@ hr {
   font-size: 16px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+/* @media only screen and (min-width: 768px) and (max-width: 991px) {
   .best-pricing .pricing-img {
     padding-top: 80px;
   }
-}
+} */
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+/* @media only screen and (min-width: 576px) and (max-width: 767px) {
   .best-pricing .pricing-img {
     padding-top: 60px;
   }
-}
+} */
 
-@media (max-width: 575px) {
+/* @media (max-width: 575px) {
   .best-pricing .pricing-img {
     padding-top: 60px;
   }
-}
+} */
 
 .best-pricing .pricing-img .pricing-img1 {
   position: absolute;
